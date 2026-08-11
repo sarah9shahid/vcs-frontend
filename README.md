@@ -8,7 +8,7 @@ A modern, responsive web application inspired by GitHub, built to showcase full-
 
 > Watch a full walkthrough of the application below:
 
-![App Walkthrough](https://github.com/user-attachments/assets/67818927-f8be-4601-ab56-45a89cf62441)
+![App Walkthrough](demoVCS.mov)
 
 
 ---
