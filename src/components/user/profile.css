@@ -1,0 +1,156 @@
+:root {
+    --bg-main: #0d1117;
+    --bg-card: #161b22;
+    --border-color: #30363d;
+    --text-primary: #e6edf3;
+    --text-secondary: #8d96a0;
+    --accent-green: #238636;
+    --btn-bg: #21262d;
+    --btn-hover: #30363d;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Page Layout Container */
+.profile-page-wrapper {
+    display: grid;
+    grid-template-columns: 296px 1fr;
+    gap: 32px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+/* User Info Sidebar */
+.user-profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-avatar-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 296px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    background-color: #21262d;
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-names {
+    margin-top: 8px;
+}
+
+.profile-username {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.profile-handle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 2px;
+}
+
+.follow-btn {
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--btn-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.follow-btn:hover {
+    background-color: var(--btn-hover);
+    border-color: #8b949e;
+}
+
+.followers-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.followers-info strong {
+    color: var(--text-primary);
+}
+
+/* Right Content Area & HeatMap Card */
+.heat-map-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.heat-map-card {
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.heat-map-title {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+/* Heatmap Styling Overrides */
+.HeatMapProfile {
+    color: var(--text-secondary) !important;
+    background: transparent !important;
+}
+
+/* Fixed Logout Button Fix */
+.logout-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    padding: 8px 16px;
+    background-color: #da3633;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease;
+    z-index: 100;
+}
+
+.logout-btn:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Grid for Smaller Screens */
+@media (max-width: 768px) {
+    .profile-page-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-avatar-container {
+        max-width: 120px;
+    }
+}
